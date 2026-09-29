@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+
+
+
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    background-image: url('Fondo.jpg');
+    overflow-x: hidden;
+}
+
+.logo-img {
+    height: 50px; 
+    width: auto;
+    margin-left: 15px;
+}
+
+.menu-navegacion  {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid #179aec;
+    box-shadow: 0 5px 20px rgba(23, 154, 236, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+
+.menu-navegacion a {
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+    
+}
+
+.menu-navegacion ul li a  {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.menu-navegacion ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #179aec;
+    transition: width 0.3s ease;
+}
+
+.menu-navegacion ul li a:hover::after {
+    width: 100%;
+}
+
+
+.menu-navegacion a:hover {
+    color: #179aec;
+    text-shadow: 0 0 10px rgba(23, 154, 236, 0.6);
+    transition: all 0.3s ease;
+
+}
+
+
+.banner-contenedor {
+    background-image: url('banner.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+
+.info-inicio{
+    color: #000000;
+    padding: 60px 50px;
+    border-radius: 20px;
+    max-width: 600px;
+    position: relative;
+}
+
+
+.info-inicio h1 {
+ color: #179aec;
+ font-size: 3.5em;
+ margin-bottom: 20px;
+ font-weight: 800px;
+}
+
+
+.seccion-nosotros{
+    padding: 80px 50px;
+    text-align: center;
+
+}
+
+.seccion-nosotros h2 {
+    font-size: 2.5em;
+    color: #179aec;
+    margin-bottom: 30px;
+}
+
+.seccion-nosotros p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.caja-texto {
+    background: linear-gradient(135deg, #eba428 0%, #3b41ec 100%);
+    color: #000000;
+    padding: 40px 30px;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.caja-texto h3 {
+    font-size: 1.8em;
+    color: #179aec;
+    margin-bottom: 15px;
+}
+
+
+.seccion-servicios {
+    background: linear-gradient(135deg, #3f3f54 0%, #2328c1 100%);
+    padding: 100px 50px;
+    text-align: center;
+    
+}
+.titulo-Servicios{ color: #179aec;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+    
+
+.titulo-galeria {
+    color: #179aec;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.galeria-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   
+}
+
+.galeria-img {
+    width: 250px;
+    height: 180px;
+    border-radius: 12px;
+    border: 2px solid #179aec;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(169, 208, 229, 0.504);
+
+}
+
+
+.seccion-contactos {
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('Fondo.jpg');
+}
+
+.seccion-contactos > h2 {
+    color: #176fa3;
+    font-size: 2.2em;
+    margin-bottom: 16px;
+}
+
+.seccion-contactos > p {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+.seccion-contactos ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: min(100%, 540px);
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1806e3 0%, #179aec 100%);
+    box-shadow: 0 16px 36px rgba(20, 40, 60, 0.24);
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.formulario-contacto input:not(.boton-enviar),
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #8096e7;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font: inherit;
+}
+
+.formulario-contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: 4px solid rgba(23, 154, 236, 0.35);
+    border-color: #179aec;
+}
+
+.boton-enviar {
+    align-self: center;
+    min-width: 160px;
+    margin-top: 14px;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0125ee;
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #179aec;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+    transform: translateY(-3px);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 20px;
+    background: linear-gradient(135deg, #333336 0%, #179aec 100%);
+    text-align: center;
+}
+
